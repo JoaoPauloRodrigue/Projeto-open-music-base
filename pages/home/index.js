@@ -76,16 +76,17 @@ const buttonFilterGospel  = document.querySelector('#gospel');
 buttonFilterAll.addEventListener('click', (event) => {
     event.preventDefault();
 
+    filterPrice(products);
     insertCards(products);
 })
 
 buttonFilterPop.addEventListener('click', (event) => {
     event.preventDefault();
     const arrayFilterPop = products.filter((element) => {
-        console.log(element.category)
-        return element.category == 0 || element.price >= filterPrice(products);
+       
+        return element.category == 0;
     })
-    console.log(arrayFilterPop)
+    filterPrice(arrayFilterPop);
     insertCards(arrayFilterPop);
 })
 
@@ -95,7 +96,7 @@ buttonFilterMPB.addEventListener('click', (event) => {
 
         return element.category == 1;
     })
-
+    filterPrice(arrayFilterMPB)
     insertCards(arrayFilterMPB);
 })
 
@@ -105,7 +106,7 @@ buttonFilterForro.addEventListener('click', (event) => {
 
         return element.category == 2;
     })
-
+    filterPrice(arrayFilterForro);
     insertCards(arrayFilterForro);
 })
 
@@ -115,7 +116,7 @@ buttonFilterSamba.addEventListener('click', (event) => {
 
         return element.category == 3;
     })
-
+    filterPrice(arrayFilterSamba);
     insertCards(arrayFilterSamba);
 })
 
@@ -125,7 +126,7 @@ buttonFilterBaiao.addEventListener('click', (event) => {
 
         return element.category == 4;
     })
-
+    filterPrice(arrayFilterBaiao);
     insertCards(arrayFilterBaiao);
 })
 
@@ -135,7 +136,7 @@ buttonFilterRap.addEventListener('click', (event) => {
 
         return element.category == 5;
     })
-
+    filterPrice(arrayFilterRap);
     insertCards(arrayFilterRap);
 })
 
@@ -145,7 +146,7 @@ buttonFilterHipHop.addEventListener('click', (event) => {
 
         return element.category == 6;
     })
-
+    filterPrice(arrayFilterHipHop);
     insertCards(arrayFilterHipHop);
 })
 
@@ -155,7 +156,7 @@ buttonFilterRock.addEventListener('click', (event) => {
 
         return element.category == 7;
     })
-
+    filterPrice(arrayFilterRock);
     insertCards(arrayFilterRock);
 })
 
@@ -165,7 +166,7 @@ buttonFilterReggae.addEventListener('click', (event) => {
 
         return element.category == 8;
     })
-
+    filterPrice(arrayFilterReggae);
     insertCards(arrayFilterReggae);
 })
 
@@ -175,7 +176,7 @@ buttonFilterCountry.addEventListener('click', (event) => {
 
         return element.category == 9;
     })
-
+    filterPrice(arrayFilterCountry);
     insertCards(arrayFilterCountry);
 })
 
@@ -185,7 +186,7 @@ buttonFilterGospel.addEventListener('click', (event) => {
 
         return element.category == 10;
     })
-
+    filterPrice(arrayFilterGospel);
     insertCards(arrayFilterGospel);
 })
 
@@ -199,11 +200,14 @@ function filterPrice(arr) {
     inputFilterRange.addEventListener('input',(event) => {
       let filterPrice =  valuePriceFilter.textContent = `Até R$ ${inputFilterRange.value},00`;
 
+      const arrFilterPrice = arr.filter((element) => element.price <= inputFilterRange.value)
+      insertCards (arrFilterPrice)
+      
       if(filterPrice) {
         
         return +inputFilterRange.value;
       }
     })
 }
-filterPrice(products)
+filterPrice(products);
 

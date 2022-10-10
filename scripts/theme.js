@@ -3,6 +3,11 @@ function toggleDarkMode() {
     const toggleBtn = document.getElementById('toggleicon');
     const html      = document.querySelector('html');
 
+    if(localStorage.darkmode){
+        html.classList.toggle('dark-mode');
+        toggleBtn.src = './assets/img/sun.svg';
+    }
+
     dkBtn.addEventListener('click', () => {
 
         html.classList.toggle('dark-mode');
@@ -18,11 +23,11 @@ function toggleDarkMode() {
             localStorage.removeItem('darkmode');
         }
 
-        if(toggleBtn.classList.contains('white-bg')) {
+        if(html.classList.contains('dark-mode')) {
 
             toggleBtn.src = './assets/img/sun.svg'
         }
-        else {
+        else if(!html.classList.contains('dark-mode')){
             toggleBtn.src = './assets/img/moon.svg'
         }
     })

@@ -1,1 +1,12 @@
-/* Desenvolva sua estilização aqui ... */
+.title-filter {
+    margin-bottom: 24px;
+}
+
+.btns-filters {
+    margin-bottom: 60px;
+}
+
+
+.range-filter {
+    margin-bottom: 62px;
+}

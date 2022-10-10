@@ -1,8 +1,8 @@
 const products = [
   {
     title: "Magnetite",
-    category: 1,
-    price: 89.0,
+    category: 0,
+    price: 280.0,
     img: "../../assets/img/1.jpg",
     band: "Scalene",
     year: 2017,
@@ -11,7 +11,7 @@ const products = [
   {
     title: "Acabou o Chorare",
     category: 2,
-    price: 66.0,
+    price: 70.0,
     img: "../../assets/img/2.jpg",
     band: "Novos Baianos",
     year: 1972,
@@ -19,7 +19,7 @@ const products = [
   },
   {
     title: "Nirvana Discografia",
-    category: 3,
+    category: 7,
     price: 50.0,
     img: "../../assets/img/3.jpg",
     band: "Nirvava",
@@ -28,8 +28,8 @@ const products = [
   },
   {
     title: "Both Sides",
-    category: 4,
-    price: 22.0,
+    category: 10,
+    price: 120.0,
     img: "../../assets/img/4.jpg",
     band: "Phil Collins",
     year: 1993,

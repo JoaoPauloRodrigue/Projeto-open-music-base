@@ -1,0 +1,21 @@
+.card {
+    width: 308px;
+    height: 259px;
+    background-color: var(--color-grey-8);
+    border-radius: 4px;
+    list-style: none;
+    margin-bottom: 32px;
+    
+}
+
+.album-author {
+    margin: 20px 16px;
+}
+
+.card h2 {
+    margin: 20px 16px;
+}
+
+.product-price-btn {
+    margin: 7px 16px 27px 16px;
+}

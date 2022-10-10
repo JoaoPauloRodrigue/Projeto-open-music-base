@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/globalStyles.css" />
+    <link rel="stylesheet" href="./pages/home/index.css" />
+    <link rel="stylesheet" href="./styles/position.css" />
+    <link rel="stylesheet" href="./styles/flex.css" />
+    <link rel="stylesheet" href="./styles/color.css" />
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" href="./styles/button.css" />
+    <link rel="stylesheet" href="./styles/input.css" />
+    <link rel="stylesheet" href="./styles/font.css" />
+    <link rel="stylesheet" href="./styles/card.css" />
+    <link rel="stylesheet" href="./styles/image.css" />
+    <link rel="stylesheet" href="./styles/gap.css" />
+    <title>Open Music</title>
+  </head>
+  <body>
+    <header class="container">
+      <nav class="nav-container flex direction-row align-items-center justify-content-sb">
+        <h1 class="grey-1">Open music</h1>
+        <button id="darkMode" class="white-bg">
+          <span><img id="toggleicon" src="./assets/img/moon.svg" alt="iconDarkmode"></span>
+        </button>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="filter flex direction-col">
+        <div class="title-filter">
+          <h2 class="grey-1-sub-title">Gêneros</h2>
+        </div>
+        <div class="btns-filters flex direction-row wrap gap-37">
+          <button id="all">Todos</button>
+          <button id="pop">Pop</button>
+          <button id="mpb">MPB</button>
+          <button id="forro">Forró</button>
+          <button id="samba">Samba</button>
+          <button id="baiao">Baião</button>
+          <button id="rap">Rap</button>
+          <button id="hip-hop">Hip-hop</button>
+          <button id="rock">Rock</button>
+          <button id="reggae">Reggae</button>
+          <button id="country">Country</button>
+          <button id="gospel">Gospel</button>
+        </div>
+        <div class="range-filter flex direction-col gap-30">
+
+          <div class="flex direction-row align-items-center justify-content-sb">
+            <label class="grey-1-sub-title" for="">Definir preço</label>
+            <p id="value-price" class="grey-2">Até R$ 00,00</p>
+          </div>
+
+          <input id="filter-price" type="range" min="0" max="300" step="10" value="0" width="641px">
+
+        </div>
+      </section>
+
+      <section class="album-collection flex direction-col gap-60">
+        <h2 class="grey-1-sub-title">Albums encontrados</h2>
+
+        <ul id="album-list" class="flex direction-row wrap gap-70">
+        </ul>
+        
+      </section>
+    </main>
+    <script src="./scripts/theme.js"></script>
+    <script src="./pages/home/productsData.js"></script>
+    <script src="./pages/home/index.js"></script>
+  </body>
+</html>

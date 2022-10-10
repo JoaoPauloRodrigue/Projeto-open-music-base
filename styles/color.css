@@ -1,0 +1,23 @@
+.grey-1 {
+    color: var(--color-grey-1);
+}
+
+.grey-1-sub-title {
+    color: var(--color-grey-sub);
+}
+
+.grey-2 {
+    color: var(--color-grey-2);
+}
+
+.grey-2-btn {
+    color: var(--color-grey-btn);
+}
+
+.grey-7-bg {
+    background-color: var(--color-grey-7);
+}
+
+.white-bg {
+    background-color: var(--color-grey-8);
+}
